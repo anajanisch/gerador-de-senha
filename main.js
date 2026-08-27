@@ -1,5 +1,12 @@
     const numeroSenha = document.querySelector ('.parametro-senha__texto')
-    
+    const campoSenha = document.querySelector ('#campo-senha')
+
+    campoSenha.value = ('janisch')
+
+    let letraMaiusculas ='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+    let letrasMinusculas ='abcdefghijklmnopqrstuwxyz'
+
     tamanhoSenha = 8
     numeroSenha.textContent = tamanhoSenha;
 
