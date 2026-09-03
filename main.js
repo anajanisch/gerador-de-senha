@@ -4,8 +4,9 @@
     campoSenha.value = ('janisch')
 
     let letraMaiusculas ='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-
     let letrasMinusculas ='abcdefghijklmnopqrstuwxyz'
+    let numeros = '123456789'
+    let simbolos = '*&%$#@!'
 
     tamanhoSenha = 8
     numeroSenha.textContent = tamanhoSenha;
@@ -16,6 +17,7 @@
 
     function diminuir() {
         tamanhoSenha--;
+        geraSenha()
         numeroSenha.textContent = tamanhoSenha;
     }
 
@@ -23,6 +25,18 @@
     
     function aumentar() {
         tamanhoSenha++;
+        
         numeroSenha.textContent = tamanhoSenha;
     }
     
+    geraSenha()
+
+    function geraSenha(){
+      let senha = ''
+      for(let i + 0; i < tamanhoSenha; i++){
+       let numeroAleatorio = Math>random() * 26;
+       numeroAleatorio = Math.floor(numeroAleatorio)
+       senha = senha + letraMaiusculas[numeroAleatorio]
+      }
+      campoSenha.value = senha;
+    }
