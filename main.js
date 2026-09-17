@@ -1,6 +1,9 @@
     const numeroSenha = document.querySelector ('.parametro-senha__texto')
     const campoSenha = document.querySelector ('#campo-senha')
 
+    const forcaSenha = document.querySelector("forca")
+    forcaSenha.classList.add('media')
+
     campoSenha.value = ('janisch')
 
     let letraMaiusculas ='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -17,9 +20,6 @@
         checkbox[i].onclik = geraSenha;
     }
 
-
-    
-
     const botoes =  document.querySelectorAll ('.parametro-senha__botao')
 
     botoes[0].onclick = diminuir;
@@ -34,7 +34,7 @@
     
     function aumentar() {
         tamanhoSenha++;
-        
+        geraSenha()
         numeroSenha.textContent = tamanhoSenha;
     }
     
@@ -48,4 +48,13 @@
        senha = senha + letraMaiusculas[numeroAleatorio]
       }
       campoSenha.value = senha;
+      classificarSenha()
+    }
+
+    function classificarSenha(){
+     
+        if(tamanhoSenha > 11){
+            forcaSenha.classList.add('forte')
+      }
+
     }
